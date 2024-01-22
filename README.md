@@ -61,4 +61,7 @@ The structure of the web API is as follows:
 <img width="816" alt="Screenshot 2024-01-22 at 13 48 25" src="https://github.com/AbdennourHsn/AutoCarApi/assets/119530347/f95a78c3-c196-4adb-b49c-17e9f06e2bca">
 <img width="816" alt="Screenshot 2024-01-22 at 13 50 28" src="https://github.com/AbdennourHsn/AutoCarApi/assets/119530347/136bb31d-0fa3-491d-9088-57dd34234fe0">
 
+## Challenges
+
+- **Recieve and Upload files of 3D Models from diffrents format (gltf , Fbx , glb , Obj ...) :** 
 
