@@ -116,7 +116,6 @@ The structure of the web API is as follows:
 
         [HttpGet("file/{name}")]
         public IActionResult GetCarFile(string name)
-        
         {
             var filePath = Path.Combine(Directory.GetCurrentDirectory(), "assets", "cars" , name);
             var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
@@ -125,19 +124,5 @@ The structure of the web API is as follows:
 
             return new FileStreamResult(fileStream, contentType);
         }
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<string>> DeleteCar(int id)
-        {
-            var car = await _context.Cars.FindAsync(id);
-            if (car != null)
-            {
-                _context.TreeDModels.Remove(car);
-                await _context.SaveChangesAsync();
-                return Ok("Car deleted successfully!");
-            }
-            else
-            {
-                return NotFound("Car not found");
-            }
-        }
+
 
