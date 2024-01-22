@@ -38,8 +38,19 @@ The structure of the web API is as follows:
 ## Entities Diagram
 <img width="933" alt="Screenshot 2024-01-22 at 13 46 27" src="https://github.com/AbdennourHsn/AutoCarApi/assets/119530347/96e1af54-1931-4e6a-931c-ff21cb47a2d3">
 
+## Controllers
 
+Controllers
+      │   │   ├── BaseApiController.cs
+      │   │   ├── AccountController.cs // Manages user accounts and authentication-related operations, such as user registration, login
+      │   │   ├── CarsController.cs // Handles operations related to cars,list of cars, adding new cars, updating car information
+      │   │   ├── ColorsController.cs
+      │   │   ├── ShowroomsController.cs
+      │   │   ├── UsersController.cs
+      │   │   ├── EnvironementController.cs
 
 ## Some API Endpoints
 <img width="816" alt="Screenshot 2024-01-22 at 13 48 25" src="https://github.com/AbdennourHsn/AutoCarApi/assets/119530347/f95a78c3-c196-4adb-b49c-17e9f06e2bca">
 <img width="816" alt="Screenshot 2024-01-22 at 13 50 28" src="https://github.com/AbdennourHsn/AutoCarApi/assets/119530347/136bb31d-0fa3-491d-9088-57dd34234fe0">
+
+
