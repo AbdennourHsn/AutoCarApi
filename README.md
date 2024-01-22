@@ -35,4 +35,9 @@ The structure of the web API is as follows:
 
 - **Services:** This folder contains classes that implement the business logic of the application.
 
+## Entities Diagram
+<img width="933" alt="Screenshot 2024-01-22 at 13 46 27" src="https://github.com/AbdennourHsn/AutoCarApi/assets/119530347/96e1af54-1931-4e6a-931c-ff21cb47a2d3">
+
+
+
 ## Some API Endpoints
