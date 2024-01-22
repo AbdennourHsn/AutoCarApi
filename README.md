@@ -50,7 +50,7 @@ Controllers
       
       │   │   ├── ColorsController.cs
       
-      │   │   ├── ShowroomsController.cs
+      │   │   ├── ShowroomsController.cs  //Deals with showroom-related functionalities,displaying information about showrooms, adding new showrooms...
       
       │   │   ├── UsersController.cs
       
