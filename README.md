@@ -41,6 +41,7 @@ The structure of the web API is as follows:
 ## Controllers
 
 Controllers
+
       │   │   ├── BaseApiController.cs
       
       │   │   ├── AccountController.cs // Manages user accounts and authentication-related operations, such as user registration, login
