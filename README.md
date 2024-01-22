@@ -17,6 +17,7 @@
 
 
 In order to ensure the stability, security, and performance of our VR application, as well as to facilitate the integration and communication of different phases of our application with the database, using .NET Web API, we can establish a secure and reliable communication between the frontend of our VR application and the web interface with the backend. This allows us to manage various functionalities, such as user authentication, showroom management, and data storage, in an effective and structured manner.
-<hr>
+<div align="center">
 <img width="654" alt="Screenshot 2024-01-22 at 13 32 19" src="https://github.com/AbdennourHsn/AutoCarApi/assets/119530347/52d39e59-20d1-4a38-92f2-3df853c09b79">
+</div>
 
