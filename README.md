@@ -24,3 +24,15 @@ In order to ensure the stability, security, and performance of our VR applicatio
 ## Structure of the .NET Web API
 The structuring of a project is essential for organizing files in a logical, clear, and consistent manner. This approach allows the application to evolve smoothly, even with the gradual addition of numerous files, thus avoiding disorder and the ordeal of finding a specific piece of code.
 The structure of the web API is as follows:
+
+- **Assets:** This folder contains various types of resources, such as images and files.
+
+- **Controllers:** This folder contains controller classes that handle HTTP requests and associated actions.
+
+- **DTOs (Data Transfer Objects):** Used to store classes that serve to transfer data between different layers of your application.
+
+- **Entities:** This folder contains classes representing the main entities of the application.
+
+- **Interfaces:** This folder contains interfaces describing the contracts of application classes.
+
+- **Services:** This folder contains classes that implement the business logic of the application.
