@@ -63,8 +63,9 @@ The structure of the web API is as follows:
 
 ## Challenges
 
-- **Recieve and Upload files of 3D Models from diffrents format (gltf , Fbx , glb , Obj ...) :** 
-[HttpPost("add")]
+- **Recieve and Upload files of 3D Models from diffrents format (gltf , Fbx , glb , Obj ...) :**
+
+        [HttpPost("add")]
         [RequestSizeLimit(100_000_000)]
         public async Task<IActionResult> UploadModel([FromForm] CarDto dto, IFormFile file)
         {
@@ -72,10 +73,8 @@ The structure of the web API is as follows:
             try{filePath = await SaveUploadedFile(file);}
             catch (ArgumentException ex){return BadRequest(ex.Message);}
             User owner = await _context.Users.FindAsync(dto.OwnerId);
-
             ICollection<Color> colors=JsonToColors(dto.Colors);
             Console.WriteLine("lenght :"+colors.Count());
-            
             Car car= new Car{
                  ModelName=dto.ModelName,
                  FilePath=filePath,
