@@ -21,3 +21,6 @@ In order to ensure the stability, security, and performance of our VR applicatio
 <img width="654" alt="Screenshot 2024-01-22 at 13 32 19" src="https://github.com/AbdennourHsn/AutoCarApi/assets/119530347/52d39e59-20d1-4a38-92f2-3df853c09b79">
 </div>
 
+## Structure of the .NET Web API
+The structuring of a project is essential for organizing files in a logical, clear, and consistent manner. This approach allows the application to evolve smoothly, even with the gradual addition of numerous files, thus avoiding disorder and the ordeal of finding a specific piece of code.
+The structure of the web API is as follows:
