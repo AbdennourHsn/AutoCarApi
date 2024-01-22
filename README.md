@@ -67,11 +67,10 @@ The structure of the web API is as follows:
 
   
 
+**Recieve Car Model :**
 
         [HttpPost("add")]
-  
         [RequestSizeLimit(100_000_000)]
-  
         public async Task<IActionResult> UploadModel([FromForm] CarDto dto, IFormFile file)
   
         {
