@@ -40,7 +40,7 @@ The structure of the web API is as follows:
 
 ## Controllers
 
-Controllers
+
 
       │   │   ├── BaseApiController.cs
       
@@ -52,7 +52,7 @@ Controllers
       
       │   │   ├── ShowroomsController.cs  //Deals with showroom-related functionalities,displaying information about showrooms, adding new showrooms...
       
-      │   │   ├── UsersController.cs
+      │   │   ├── UsersController.cs //Handles user-related operations that are not directly tied to account management, such as retrieving user profiles, updating user information
       
       │   │   ├── EnvironementController.cs
       
