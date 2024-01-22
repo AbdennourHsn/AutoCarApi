@@ -82,8 +82,6 @@ The structure of the web API is as follows:
             User owner = await _context.Users.FindAsync(dto.OwnerId);
   
             ICollection<Color> colors=JsonToColors(dto.Colors);
-  
-            Console.WriteLine("lenght :"+colors.Count());
             Car car= new Car{
                  ModelName=dto.ModelName,
                  FilePath=filePath,
@@ -98,3 +96,18 @@ The structure of the web API is as follows:
              await _context.SaveChangesAsync();
             return Ok("Upload successful!");
         }
+
+       private async  Task<string> SaveUploadedFile(IFormFile file){
+            if (file == null || file.Length == 0)
+            {
+                 throw new ArgumentException("No file uploaded");
+            }
+
+            // Save the uploaded file
+            var filePath = "assets/cars/"+file.FileName;
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+            return filePath;
+        } 
