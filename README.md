@@ -36,3 +36,5 @@ The structure of the web API is as follows:
 - **Interfaces:** This folder contains interfaces describing the contracts of application classes.
 
 - **Services:** This folder contains classes that implement the business logic of the application.
+
+## Some API Endpoints
