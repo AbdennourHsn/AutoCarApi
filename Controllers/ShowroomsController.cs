@@ -85,5 +85,21 @@ namespace api.Controllers
             await _context.SaveChangesAsync();
             return Ok("Showroom deleted successfully!");
         }
+
+        [HttpGet("{showroomId}/Cars")]
+        public ActionResult<IEnumerable<Car>> GetCarsByShowroomId(int showroomId)
+        {
+            var showroom = _context.Showrooms
+                .Where(s => s.Id == showroomId)
+                .Include(s => s.Cars)
+                .FirstOrDefault();
+
+            if (showroom == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(showroom.Cars);
+        }
     }
 }
