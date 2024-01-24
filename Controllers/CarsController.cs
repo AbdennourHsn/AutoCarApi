@@ -47,7 +47,6 @@ namespace api.Controllers
             User owner = await _context.Users.FindAsync(dto.OwnerId);
 
             ICollection<Color> colors=JsonToColors(dto.Colors);
-            Console.WriteLine("lenght :"+colors.Count());
             
             Car car= new Car{
                  ModelName=dto.ModelName,
@@ -107,6 +106,7 @@ namespace api.Controllers
 
             return new FileStreamResult(fileStream, contentType);
         }
+
         [HttpDelete("{id}")]
         public async Task<ActionResult<string>> DeleteCar(int id)
         {

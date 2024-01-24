@@ -3,7 +3,7 @@ using api.Entities;
 
 namespace Interfaces
 {
-    public interface ITokenServise
+    public interface ITokenService
     {
         string CreateToke(User user);
     }

@@ -8,7 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace api.Services
 {
-    public class TokenService : ITokenServise
+    public class TokenService : ITokenService
     {
         private readonly SymmetricSecurityKey _key;
         public TokenService(IConfiguration config)
