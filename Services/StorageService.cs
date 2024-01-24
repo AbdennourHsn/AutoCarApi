@@ -8,7 +8,7 @@ namespace api.Services
 	{
         public FileStreamResult GetFile(string name)
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "assets", "cars", name);
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "assets", "carsModels", name);
             var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
             var contentType = "application/octet-stream";
             return new FileStreamResult(fileStream, contentType);
@@ -20,7 +20,7 @@ namespace api.Services
             {
                 throw new ArgumentException("No file uploaded");
             }
-            var filePath = "assets/cars/" + file.FileName;
+            var filePath = "assets/carsModels/" + file.FileName;
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
                 await file.CopyToAsync(stream);
