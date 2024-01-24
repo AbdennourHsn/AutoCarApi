@@ -22,6 +22,9 @@ namespace api.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<User>().HasMany(u=>u.Showrooms)
+                .WithOne()
+                .HasForeignKey(s=>s.Owner);
             modelBuilder.Entity<Car>()
                 .HasMany(c => c.Colors)
                 .WithOne()

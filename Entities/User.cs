@@ -16,7 +16,7 @@ namespace api.Entities
         public byte[] PasswordSalt  { get; set; }
         public string Phone  { get; set; }
         public bool admin  { get; set; }
-
+        public ICollection<Showroom> Showrooms { get; set; }
 
     }
 }
