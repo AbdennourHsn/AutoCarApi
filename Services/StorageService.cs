@@ -14,7 +14,7 @@ namespace api.Services
             return new FileStreamResult(fileStream, contentType);
         }
 
-        public string SaveFile(IFormFile file)
+        public async Task<string> SaveFile(IFormFile file)
         {
             if (file == null || file.Length == 0)
             {
@@ -25,7 +25,7 @@ namespace api.Services
             var filePath = "assets/cars/" + file.FileName;
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
-                file.CopyToAsync(stream);
+                await file.CopyToAsync(stream);
             }
             return filePath;
         }

@@ -5,7 +5,7 @@ namespace api.Interfaces
 {
 	public interface IStorageService
 	{
-		string SaveFile(IFormFile file);
+        Task<string> SaveFile(IFormFile file);
         FileStreamResult GetFile(string name);
     }
 }

@@ -15,8 +15,8 @@ namespace api.Controllers
     public class AccountController : BaseApiController
     {
         private readonly DataContext _context;
-        private readonly ITokenServise _tokenServise;
-        public AccountController (DataContext context , ITokenServise tokenServise)
+        private readonly ITokenService _tokenServise;
+        public AccountController (DataContext context , ITokenService tokenServise)
         {
             _context = context;
             _tokenServise=tokenServise;

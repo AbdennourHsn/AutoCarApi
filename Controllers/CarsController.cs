@@ -3,6 +3,7 @@ using System.Text.Json;
 using api.Data;
 using api.DTOs;
 using api.Entities;
+using api.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,10 +12,12 @@ namespace api.Controllers
     public class CarsController : BaseApiController
     {
         private readonly DataContext _context;
+        private readonly IStorageService _storageService;
 
-        public CarsController(DataContext context)
+        public CarsController(DataContext context , IStorageService storageService)
         {
             _context = context;
+            _storageService = storageService;
         }
 
         [HttpGet]
