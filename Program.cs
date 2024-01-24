@@ -1,4 +1,5 @@
 using api.Data;
+using api.Interfaces;
 using api.Services;
 using Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -29,7 +30,8 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddScoped<ITokenServise , TokenService>();
+builder.Services.AddScoped<ITokenService , TokenService>();
+builder.Services.AddScoped<IStorageService, StorageService>();
 
 var app = builder.Build();
 
