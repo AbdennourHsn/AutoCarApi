@@ -25,6 +25,9 @@ namespace api.Data
             modelBuilder.Entity<User>().HasMany(u=>u.Showrooms)
                 .WithOne()
                 .HasForeignKey(s=>s.Owner);
+            modelBuilder.Entity<Showroom>()
+                .HasMany(s => s.Cars)
+                .WithMany(s=>s.Showrooms);
             modelBuilder.Entity<Car>()
                 .HasMany(c => c.Colors)
                 .WithOne()
