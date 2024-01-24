@@ -45,7 +45,7 @@ namespace api.Controllers
         public async Task<IActionResult> UploadModel([FromForm] CarDto dto, IFormFile file)
         {
             string filePath;
-            try{filePath = await SaveUploadedFile(file);}
+            try{filePath = await _storageService.SaveFile(file);}
             catch (ArgumentException ex){return BadRequest(ex.Message);}
             User owner = await _context.Users.FindAsync(dto.OwnerId);
 
@@ -102,12 +102,7 @@ namespace api.Controllers
         [HttpGet("file/{name}")]
         public IActionResult GetCarFile(string name)
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "assets", "cars" , name);
-            var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
-
-            var contentType = "application/octet-stream";
-
-            return new FileStreamResult(fileStream, contentType);
+            return _storageService.GetFile(name);
         }
 
         [HttpDelete("{id}")]

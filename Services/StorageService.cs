@@ -20,8 +20,6 @@ namespace api.Services
             {
                 throw new ArgumentException("No file uploaded");
             }
-
-            // Save the uploaded file
             var filePath = "assets/cars/" + file.FileName;
             using (var stream = new FileStream(filePath, FileMode.Create))
             {
