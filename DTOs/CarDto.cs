@@ -15,5 +15,6 @@ namespace api.DTOs
         public int[] ImagesIds { get; set; }
         public string Colors { get; set; }
         public int[] WheelsIds {get; set;}
+        
     }
 }
